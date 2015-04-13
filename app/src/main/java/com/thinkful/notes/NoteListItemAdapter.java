@@ -18,15 +18,35 @@ public class NoteListItemAdapter extends RecyclerView.Adapter<NoteListItemAdapte
     private RecyclerView mRecyclerView;
     private ArrayList<NoteListItem> mNoteListItems = new ArrayList<NoteListItem>();
 
+    public void addItem(NoteListItem item) {
+        mNoteListItems.add(0, item);
+        notifyItemInserted(0);
+    }
+
+    public void removeItem(int position) {
+        mNoteListItems.remove(position);
+        notifyItemRemoved(position);
+    }
+
     public NoteListItemAdapter(Context context, RecyclerView recyclerView) {
         this.mContext = context;
         this.mRecyclerView = recyclerView;
-        this.mNoteListItems.add(new NoteListItem("This is your first note."));
+        this.mNoteListItems.add(new NoteListItem("This is your 1 note."));
     }
 
     @Override
     public NoteListItemAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(mContext).inflate(R.layout.note_list_item, viewGroup, false);
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get the position of v
+                int mPosition = mRecyclerView.getChildPosition(v);
+
+                // Call the removeItem method with the position
+                removeItem(mPosition);
+            }
+        });
         return new ViewHolder(v);
     }
 
@@ -53,5 +73,7 @@ public class NoteListItemAdapter extends RecyclerView.Adapter<NoteListItemAdapte
             this.text.setText(text);
         }
     }
+
+
 }
 
