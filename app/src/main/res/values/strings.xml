@@ -1,8 +1,30 @@
 <resources>
     <string name="app_name">Notes</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="note_text_label">Note:</string>
+    <string name="note_status_label">Resolved</string>
+    <string name="note_tags_label">Tags:</string>
+    <string name="note_save_label">Save</string>
     <string name="action_settings">Settings</string>
     <string name="action_selection">Selected!</string>
     <string name="default_editText">Enter some text...</string>
+    <string name="title_activity_edit_note">EditNoteActivity</string>
+    <string name="setting_color_title">Note Color Setting</string>
+    <string name="setting_color_message">R - Red; G - Green; W - White</string>
+    <string name="positive_button_label">OK</string>
+    <string name="negative_button_label">CANCEL</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <string name="settings_backgroundColor_label">Background Color</string>
+    <string name="settings_foregroundColor_label">Foreground Color</string>
+    <string name="settings_save_label">Save</string>
+
+    <string name="settings_radioButton_backgroundColor1">Red</string>
+    <string name="settings_radioButton_backgroundColor2">Green</string>
+    <string name="settings_radioButton_backgroundColor3">White</string>
+
+    <string name="settings_radioButton_foregroundColor1">Yellow</string>
+    <string name="settings_radioButton_foregroundColor2">Purple</string>
+    <string name="settings_radioButton_foregroundColor3">Gray</string>
+    <string name="settings_radioButton_foregroundColor4">Black</string>
 
 </resources>
